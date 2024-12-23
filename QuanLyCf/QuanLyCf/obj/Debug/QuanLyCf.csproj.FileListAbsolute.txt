@@ -1,0 +1,11 @@
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\obj\Debug\QuanLyCf.csproj.AssemblyReference.cache
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\obj\Debug\QuanLyCf.TrangChu_Admin.resources
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\obj\Debug\QuanLyCf.Properties.Resources.resources
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\obj\Debug\QuanLyCf.csproj.GenerateResource.cache
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\obj\Debug\QuanLyCf.csproj.CoreCompileInputs.cache
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\bin\Debug\QuanLyCf.exe.config
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\bin\Debug\QuanLyCf.exe
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\bin\Debug\QuanLyCf.pdb
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\obj\Debug\QuanLyCf.Login.Login.resources
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\obj\Debug\QuanLyCf.exe
+D:\Nam3\He_QT-CSDL\BTL_QLCF\BTL_HQTCSDL\QuanLyCf\QuanLyCf\obj\Debug\QuanLyCf.pdb

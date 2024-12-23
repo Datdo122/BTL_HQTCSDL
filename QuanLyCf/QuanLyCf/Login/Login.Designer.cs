@@ -1,4 +1,4 @@
-﻿namespace QuanLyCf
+﻿namespace QuanLyCf.Login
 {
     partial class Login
     {

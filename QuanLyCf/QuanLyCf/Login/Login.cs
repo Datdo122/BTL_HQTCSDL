@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCf
+namespace QuanLyCf.Login
 {
     public partial class Login : Form
     {
