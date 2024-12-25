@@ -65,7 +65,8 @@ CREATE TABLE bill(
 	idmon int foreign key references menu(id),
 	soluong int default 1,
 	tongtien int
-
+-- loi o day ne, sua di
+	 
 CREATE TABLE thanhtoan(
 	id int identity(1,1) primary key,
 	customername nvarchar(50),
