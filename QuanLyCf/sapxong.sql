@@ -65,6 +65,7 @@ CREATE TABLE bill(
 	idmon int foreign key references menu(id),
 	soluong int default 1,
 	tongtien int
+)
 
 CREATE TABLE thanhtoan(
 	id int identity(1,1) primary key,
@@ -92,6 +93,11 @@ CREATE TABLE chamcong(
 	giora time
 )
 
+CREATE TABLE doanhthu(
+	id int identity(1,1) primary key,
+	idthu int foreign key references thanhtoan(id),
+	idchi int foreign key references chi(id)
+)
 
 -- Thêm dữ liệu mẫu cho bảng admin
 INSERT INTO admin (username, password) VALUES
@@ -100,19 +106,19 @@ INSERT INTO admin (username, password) VALUES
 
 -- Thêm dữ liệu mẫu cho bảng nhanvien
 INSERT INTO nhanvien (fullname, namsinh, diachi, sdt, luongcoban) VALUES
-('Nguyen Van A', 1985, 'Hanoi', '0123456789', 5000000),
-('Tran Thi B', 1990, 'HCM City', '0987654321', 6000000),
-('Le Van C', 1995, 'Danang', '0912345678', 5500000),
-('Pham Thi D', 1988, 'Hue', '0908765432', 5800000),
-('Hoang Van E', 1992, 'Haiphong', '0934567890', 6200000);
+('Nguyen Van A', 1985, 'Hanoi', '0123456789', 20000),
+('Tran Thi B', 1990, 'HCM City', '0987654321', 25000),
+('Le Van C', 1995, 'Danang', '0912345678', 10000),
+('Pham Thi D', 1988, 'Hue', '0908765432', 14000),
+('Hoang Van E', 1992, 'Haiphong', '0934567890', 6000);
 
 -- Thêm dữ liệu mẫu cho bảng customer
 INSERT INTO customer (name, sdt, diemtichluy) VALUES
-('Customer A', '0901234567', 100),
-('Customer B', '0912345678', 200),
-('Customer C', '0923456789', 150),
-('Customer D', '0934567890', 250),
-('Customer E', '0945678901', 300);
+(N'Trần Tiến Đạt', '0832182014', 100),
+(N'Đinh Quang Đạt', '0868318883', 0),
+(N'Nguyễn Thành Đồng', '0971548175', 150),
+(N'Đỗ Văn Đạt', '0971386410', 250),
+(N'Bùi Khắc Huy', '0837607568', 1000);
 
 -- Thêm dữ liệu mẫu cho bảng ban
 INSERT INTO ban (ten, tinhtrang) VALUES
@@ -124,35 +130,35 @@ INSERT INTO ban (ten, tinhtrang) VALUES
 
 -- Thêm dữ liệu mẫu cho bảng nguyenlieu
 INSERT INTO nguyenlieu (ten, slton, gianhap) VALUES
-('Nguyen Lieu 1', 100, 10000),
-('Nguyen Lieu 2', 200, 15000),
-('Nguyen Lieu 3', 300, 20000),
-('Nguyen Lieu 4', 400, 25000),
-('Nguyen Lieu 5', 500, 30000);
+(N'Cà phê', 100, 10000),
+(N'Quả cam', 200, 15000),
+(N'Xoài', 300, 20000),
+(N'Mít', 400, 25000),
+(N'Sầu riêng', 500, 30000);
 
 -- Thêm dữ liệu mẫu cho bảng chi
 INSERT INTO chi (idnguyenlieu, idnhanvien, tienchi, ghichu, ngaychi) VALUES
-(1, 1, 100000, 'Mua Nguyen Lieu 1', '2024-01-01'),
-(2, 2, 150000, 'Mua Nguyen Lieu 2', '2024-01-02'),
-(3, 3, 200000, 'Mua Nguyen Lieu 3', '2024-01-03'),
-(4, 4, 250000, 'Mua Nguyen Lieu 4', '2024-01-04'),
-(5, 5, 300000, 'Mua Nguyen Lieu 5', '2024-01-05');
+(1, 1, 100000, N'mua Cà phê', '2024-01-01'),
+(2, 2, 150000, N'mua Quả cam', '2024-01-02'),
+(3, 3, 200000, N'mua Xoài', '2024-01-03'),
+(4, 4, 250000, N'mua Sầu riêng', '2024-01-04'),
+(5, 5, 300000, N'mua Mít', '2024-01-05');
 
 -- Thêm dữ liệu mẫu cho bảng danhmuc_menu
 INSERT INTO danhmuc_menu (tendanhmuc) VALUES
-('Danh Muc 1'),
-('Danh Muc 2'),
-('Danh Muc 3'),
-('Danh Muc 4'),
-('Danh Muc 5');
+('Cafe'),
+('Nước ép'),
+('Sinh tố'),
+('Sữa chua'),
+('Trà');
 
 -- Thêm dữ liệu mẫu cho bảng menu
 INSERT INTO menu (tenmon, dongia, iddanhmuc) VALUES
-('Mon 1', 50000, 1),
-('Mon 2', 60000, 2),
-('Mon 3', 70000, 3),
-('Mon 4', 80000, 4),
-('Mon 5', 90000, 5);
+(N'Trà sầu riêng', 50000, 1),
+(N'Sinh tố rau má', 60000, 2),
+(N'Mít dầm sữa chua', 70000, 3),
+(N'Nước cam kẹp nách', 80000, 4),
+(N'Nước ép cà phê', 90000, 5);
 
 -- Thêm dữ liệu mẫu cho bảng bill
 INSERT INTO bill (idmon, soluong, tongtien) VALUES
@@ -164,11 +170,11 @@ INSERT INTO bill (idmon, soluong, tongtien) VALUES
 
 -- Thêm dữ liệu mẫu cho bảng thanhtoan
 INSERT INTO thanhtoan (customername, tableid, ngaythanhtoan, phuongthucthanhtoan, thanhtien, giamgia) VALUES
-('Customer A', 1, '2024-01-01', 'Cash', 100000, 5000),
-('Customer B', 2, '2024-01-02', 'Card', 200000, 10000),
-('Customer C', 3, '2024-01-03', 'Cash', 150000, 7500),
-('Customer D', 4, '2024-01-04', 'Card', 250000, 12500),
-('Customer E', 5, '2024-01-05', 'Cash', 300000, 15000);
+(N'Trần Tiến Đạt', 1, '2024-01-01', 'Cash', 100000, 5000),
+(N'Đinh Quang Đạt', 2, '2024-01-02', 'Card', 200000, 10000),
+(N'Nguyễn Thành Đồng', 3, '2024-01-03', 'Cash', 150000, 7500),
+((N'Đỗ Văn Đạt', 4, '2024-01-04', 'Card', 250000, 12500),
+(N'Bùi Khắc Huy', 5, '2024-01-05', 'Cash', 300000, 15000);
 
 -- Thêm dữ liệu mẫu cho bảng luong
 INSERT INTO luong (idnhanvien, thuong, phat, phucap) VALUES
@@ -185,3 +191,4 @@ INSERT INTO chamcong (idnhanvien, ngaylam, giovao, giora) VALUES
 (3, '2024-01-03', '09:00:00', '18:00:00'),
 (4, '2024-01-04', '08:00:00', '17:00:00'),
 (5, '2024-01-05', '09:00:00', '18:00:00');
+
