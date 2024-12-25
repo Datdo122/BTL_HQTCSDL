@@ -173,7 +173,7 @@ INSERT INTO thanhtoan (customername, tableid, ngaythanhtoan, phuongthucthanhtoan
 (N'Trần Tiến Đạt', 1, '2024-01-01', 'Cash', 100000, 5000),
 (N'Đinh Quang Đạt', 2, '2024-01-02', 'Card', 200000, 10000),
 (N'Nguyễn Thành Đồng', 3, '2024-01-03', 'Cash', 150000, 7500),
-((N'Đỗ Văn Đạt', 4, '2024-01-04', 'Card', 250000, 12500),
+(N'Đỗ Văn Đạt', 4, '2024-01-04', 'Card', 250000, 12500),
 (N'Bùi Khắc Huy', 5, '2024-01-05', 'Cash', 300000, 15000);
 
 -- Thêm dữ liệu mẫu cho bảng luong
